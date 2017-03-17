@@ -1,0 +1,80 @@
+*{margin: 0;padding: 0;font-family: '宋体';}
+body{background-color: #181818;}
+a{text-decoration: none;}
+header{width: 100%;min-width: 1200px;background-color:#090909;height: 90px}
+.auto{width: 1200px;margin: 0 auto;}
+.logo{float: left;margin-top:5px;}
+.nav{width: 520px;height: 90px;float: right;font-size: 14px;}
+.nav>ul{list-style: none;}
+.nav>ul>li{float: left;width: 130px;height: 42px;margin-top: 48px;text-align: center;}
+.nav>ul>li>a{display: block;color: rgb(201, 201, 201);text-align:center;width: 130px;height: 42px;}
+.index-img{display: block;float: left;line-height: 42px;margin-left: 39px;padding-top: 5px;position: relative;text-align: center;}
+.img{display: block;float: left;line-height: 42px;margin-left:26px;padding-top: 5px;position: relative;text-align: center;}
+.index{display: block;float: left;line-height: 42px;margin-left: 2px;text-align: center;position: relative;}
+.nav>ul>li:hover{background-color: #DD0330;}
+.nav>ul>li>a:hover{color: white;}
+.vip-center{width: 130px;z-index:101;position: absolute;background-color: white;}
+.login{width: 130px;height:95px;text-align: center;border-bottom: 1px solid rgb(238, 238, 238);}
+.myOrder{cursor: pointer;}
+.logout{width: 130px;height:90px;text-align: center;border-bottom: 1px solid rgb(238, 238, 238);line-height: 30px;cursor: pointer;}
+.p1{cursor: pointer;height: 35px;line-height: 35px;width: 100px;margin: 10px 0 0 15px;background-color:#DD0330;color: white; }
+#p2{cursor: pointer;height: 35px;line-height: 35px;width: 100px;margin: 10px 0 0 15px;background-color:rgb(238, 240, 241);}
+.register{width: 100%;padding-left:10px;}
+.cart{font-size: 12px;}
+.cart>img{float: left;margin-top: 5px;display: block;}
+.cart>span{width: 30px;height:18px;background-color:#DD0330;display: block;float: left;line-height: 18px;margin: 6px 0 0 2px;text-align: center;border-radius: 5px;color: white;}
+.cart-shop{float: left;color: rgb(189, 189, 189);font-size: 10px;line-height: 25px;}
+
+/* 底部 */
+footer{background-color: #090909;float: left;width: 100%;min-width: 1200px;}
+.foot-title{float:left;margin-top:50px;width:1200px;}
+.ft-01{float: left;height: 242px;width: 230px;position: relative;}
+.ft-02{float: left;height: 242px;width: 230px;position: relative;margin-left: 12px;}
+.ft-01-t{background-color: #DD0330;font-size: 18px;height: 30px;width:230px;line-height: 30px;position: absolute;text-align: center;bottom: 0;color: white;}
+.ft-01-d{display: none;background-color: rgb(221, 3, 48);float: left;width: 230px;height: 242px;position: absolute;opacity: 0.5;text-align: center;top: 0;z-index: 99;}
+.ft-01-bg{display: none;color: white;height: 100px;position: absolute;width: 230px;z-index: 100;top: 100px;text-align: center;line-height: 20px;}
+.ft-01-bg2{font-size: 24px;}
+.foot-line{background-color: rgb(46, 46, 46);float: left;width: 1200px;height: 1px;margin-top: 50px;}
+.foot-logo{width: 1200px;text-align: center;margin-top: 20px;}
+.foot-nav{width:1200px;margin-top:20px;height: 20px;font-size: 14px;}
+.foot-nav ul{width: 460px;list-style: none;height: 20px;margin: 0 auto;}
+.liactive{color: rgb(139, 139, 139);cursor: pointer;float: left;height: 20px;line-height: 20px;text-align:center;width: 50px;border-right: 1px solid rgb(139, 139, 139);}
+.foot-nav .li{color: rgb(139, 139, 139);cursor: pointer;float: left;height: 20px;line-height: 20px;text-align:center;width:80px;border-right: 1px solid rgb(139, 139, 139);}
+.foot-login li{color: rgb(139, 139, 139);cursor: pointer;float: left;height: 20px;line-height: 20px;text-align:center;width:80px;border-right: 1px solid black;}
+.foot-about{font-size: 14px;width: 1200px;margin-top: 20px;}
+.aboutus{width: 390px;margin: 0 auto;color: rgb(139, 139, 139);}
+.aboutus img{margin-top: 5px;display: block;float: left;}
+.foot-mess{margin-left: 30px;}
+.aboutus span{height: 35px;line-height: 35px;display: block;float: left;}
+.about-size{height: 35px;line-height: 35px;font-size: 22px;}
+.aboutus a{color: rgb(139, 139, 139);font-size: 14px;height: 35px;line-height: 35px;margin-left: 5px;}
+.foot-ts{width: 1200px;margin-top: 5px;color: rgb(139, 139, 139);font-size: 14px;height: 20px;}
+.foot-ts ul{list-style: none;width: 330px;margin: 0 auto;}
+.foot-ts ul li{float: left;width: 160px;border-left: 1px solid rgb(139, 139, 139);text-align: center;}
+.foot-ts .ti{border-left:1px solid black;}
+.foot{overflow: hidden;width: 100%;height: 65px;min-width: 1200px;font-size: 12px;margin-top: 20px;background-color:#DD0330;}
+.foot p{text-align: center;}
+.foot p:nth-of-type(1){margin-top:12px; }
+/* 遮罩层 */
+.mask{width: 100%;height: 100%;position: fixed;opacity: 0.6;top: 0;left: 0;background-color: rgb(0, 0, 0);z-index: 199;}
+.popup1{width: 450px;height: 390px;position: fixed;z-index: 200;background-color: rgb(40, 40, 40);border-radius:8px;box-shadow: 0 0 10px rgb(0,0,0);top:calc(50% - 195px);left: calc(50% - 225px);}
+.data-title{width: 450px;height: 40px;font-size: 18px;margin: 30px 0 20px 0;text-align: center;color: white;}
+.close{cursor: pointer;background-image: url('../images/closed.png');width: 20px;height: 20px;position: absolute;top: 10px;right: 20px;}
+.popup1 form{width: 300px;margin: 20px auto 60px auto;}
+.username{width: 300px;border-bottom: 1px solid rgb(80, 80, 80);height: 27px;}
+.username img{margin-top: 2px;float: left;}
+.username input{width: 270px;font-size: 13px;padding: 5px;border: none;background-color: rgb(40, 40, 40);color: rgb(255, 255, 255);float: left;}
+.password{width: 300px;border-bottom: 1px solid rgb(80, 80, 80);height: 27px;margin-top: 20px;}
+.password img{margin-top: 2px;float: left;}
+.password input{width: 270px;font-size: 13px;padding: 5px;border: none;background-color: rgb(40, 40, 40);color: rgb(255, 255, 255);float: left;}
+.hint{color: rgb(221, 3, 48);margin-top: 5px;}
+.ret{width: 300px;margin-top: 15px;}
+.ret label{color: rgb(201, 201, 201);font-size: 12px;}
+.ret label input{margin-top: 2px;font-size: 13px;float: left;margin-left:5px;}
+.ret label span{margin-left: 2px;font-size: 12px;float: left;}
+.ret label a{float: right;text-decoration: none;font-size: 12px;color: rgb(221, 3, 48);cursor: pointer;}
+.login-l{width: 300px;height: 40px;text-align: center;line-height: 40px;font-size: 14px;cursor: pointer;background-color:rgb(221, 3, 48);color: white;margin-top: 20px;border:0;}
+.login-r{width: 300px;height: 40px;text-align: center;line-height: 40px;font-size: 14px;cursor: pointer;background-color:rgb(201, 201, 201);color: #090909;margin-top:10px;}
+.redd{color: red;}
+.if{font-size: 12px;color: rgb(129, 129, 129);text-align:center;margin-top:10px;}
+.redd{cursor: pointer;}

@@ -1,0 +1,21 @@
+/* 我的订单 */
+.main{background-color: #EEF0F1;overflow: hidden;}
+.auto-l{width: 1198px;margin:0 auto;}
+.auto-l-title{width: 1198px;height: 55px;line-height: 55px;border: 1px solid rgb(221, 221, 221);margin-top:45px;background-color: white;text-align: center;color: green}
+.auto-l-empty{width: 1198px;padding: 30px;text-align: center;background-color: white;min-height: 430px;box-sizing: border-box;}
+.auto-l-empty img{width: 200px;margin: 20px 0;}
+.auto-l-empty a{display: block;width: 120px;height: 40px;text-align: center;text-decoration: none;padding: 2px 5px;line-height: 40px;background-color: rgb(143, 193, 89);border-radius: 6px;margin: 0 auto;color: white;font-size: 20px;}
+
+.cartList li{list-style: none;}
+.listTitle{background-color: rgb(236,236,236)}
+.listTitle span{display: inline-block;width: 100px;padding: 20px 0;}
+.listDetail{border-bottom: 1px solid #E3E3E3;font-size: 14px;}
+.listDetail span{display: inline-block;width: 100px;padding: 10px 0;}
+.listDetail span.toDo{color: #DD0330;cursor: pointer;}
+
+
+
+
+
+
+

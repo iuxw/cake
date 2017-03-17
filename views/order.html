@@ -1,0 +1,37 @@
+{{include 'share/header'}}
+  <div class="main">
+	<div class="auto-l">
+		<div class="auto-l-title">
+			<span>我的订单</span>
+		</div>
+		<div class="auto-l-empty">
+			<ul class="cartList">
+				<li class="listTitle">
+					<span>订单号</span>
+					<span>商品</span>
+					<span>单价</span>
+					<span>数量</span>
+					<span>规格</span>
+					<span>小计</span>
+					<span>状态</span>
+					<span>操作</span>
+					<span>下单时间</span>
+				</li>
+				{{each orders as order}}
+				<li class="listDetail">
+					<span class="orderNumber">{{order.orderNumber}}</span>
+					<span>{{order.name}}</span>
+					<span>{{order.price}}元</span>
+					<span>{{order.number}}</span>
+					<span>{{order.size}}</span>
+					<span>{{order.price * order.number}}元</span>
+					<span>{{order.status}}</span>
+					<span class="toDo">{{order.status | formatStatus}}</span>
+					<span >{{order.orderNumber | formatTime}}</span>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+  </div>
+{{include 'share/footer'}}

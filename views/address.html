@@ -1,0 +1,24 @@
+{{include 'share/header'}}
+  <div class="main">
+	<div class="auto-l">
+		<div class="auto-l-title">
+			<img src="">
+			<span>地址管理</span>
+		</div>
+		<div class="auto-l-empty">
+			<form id="address">
+				<div class="detailAddress">
+					<label for="">详细地址：<textarea name="address">{{address}}</textarea></label>
+				</div>
+				<div class="contact">
+					<label for="">联系方式：<input name="contact" type="text" value="{{contact}}"></label>
+				</div>
+				<div class="btn">
+					<input class="clear" type="button" value="清空">
+					<input type="submit" value="保存">
+				</div>
+			</form>
+		</div>
+	</div>
+  </div>
+{{include 'share/footer'}}

@@ -1,0 +1,40 @@
+{{include 'share/header'}}
+  <div class="main">
+	<div class="auto-l">
+		<div class="auto-l-title">
+			<img src="images/shopping_cart.png">
+			<span>购物车</span>
+		</div>
+		<div class="auto-l-empty">
+			{{if lists==0}}
+			<img src="images/emptycart.jpg">
+			<p>购物车空空如也~</p>
+			<a><span>立即选购</span></a>
+			{{else}}
+			<ul class="cartList">
+				<li class="listTitle">
+					<span>商品</span>
+					<span>单价</span>
+					<span>数量</span>
+					<span>规格</span>
+					<span>小计</span>
+					<span>购买</span>
+					<span>操作</span>
+				</li>
+				{{each indents as indent}}
+				<li class="listDetail" data-id="{{indent.id}}">
+					<span id="name">{{indent.name}}</span>
+					<span><span id="price">{{indent.price}}</span>元</span>
+					<span id="number">{{indent.number}}</span>
+					<span id="size">{{indent.size}}</span>
+					<span>{{indent.price * indent.number}}元</span>
+					<span class="nowShop">立即购买</span>
+					<span class="delLi">删除</span>
+				</li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</div>
+	</div>
+  </div>
+{{include 'share/footer'}}
