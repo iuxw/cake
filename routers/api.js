@@ -72,7 +72,8 @@ router.post('/api/del', function (req, res) {
         data[0].carts = data[0].carts.filter(function (ele, array) {
             return ele != req.body.id;
         });
-        data[0].save(function (err) {
+        data[0].save(function (
+            err) {
             console.log('删除成功');
             res.status(200).json({code: "success", message: "删除成功！"});
         })
@@ -151,6 +152,22 @@ router.post('/api/admin/login',function (req,res) {
             }else {
                 res.status(200).json({code:'success',message:'用户名密码错误'})
             }
+        }
+    })
+})
+//管理员修改订单
+router.post('/api/admin/changeOrder',function (req,res) {
+    db.Order.findByIdAndUpdate(req.body.id,{status:'待收货'},function (err) {
+        if(!err){
+            res.status(200).json({code:'success',message:'发货完成！'})
+        }
+    })
+})
+//用户修改订单
+router.post('/api/user/changeOrder',function (req,res) {
+    db.Order.findByIdAndUpdate(req.body.id,{status:'已完成'},function (err) {
+        if(!err){
+            res.status(200).json({code:'success',message:'已确认收货！'})
         }
     })
 })

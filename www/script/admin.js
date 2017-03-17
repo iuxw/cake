@@ -38,7 +38,26 @@ $(function () {
 
     })
     $('.logout').click(function () {
-        $.cookie('admin',{extend:-1});
-        location.href='/adminLogin';
+        $.cookie('admin','',{expires:-1});
+        location.reload();
+    });
+    $('.cartList').on('click', '.handle', function () {
+        var id = $(this).parents('.listDetail').attr('data-id');
+        var todo = $(this).html();
+        if(todo=='发货'){
+            $.ajax({
+                url: '/api/admin/changeOrder',
+                type: 'POST',
+                data: {id},
+                success: function (res, status, xhr) {
+                    if (res.code == 'success') {
+                        alert(res.message);
+                        location.reload();
+                    }
+                }
+            })
+        }else if (todo=='提醒收货'){
+            alert('提醒成功')
+        }
     });
 })

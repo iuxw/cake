@@ -1,14 +1,14 @@
 
 /* 轮播 */
 #wrap {width:100%;position: relative;height:600px;min-width: 1200px;}
-.ppt-box {width:100%;position: relative;height:600px;}
+.ppt-box {width:100%;position: relative;height:600px;cursor: pointer}
 .ppt-box div{width:100%;height:600px;position: absolute;background-size: 100% 100%;opacity: 0;}
 #p1 {background-image:url("../images/1.jpg");opacity: 1;}
 .p2 {background-image:url("../images/3.jpg");}
 .p3 {background-image:url("../images/4.jpg");}
 .p4 {background-image:url("../images/6.jpg");}
 .dot {width: 300px;height: 20px;z-index:101;position: absolute;top:580px;left: 0;right: 0; margin: auto;}
-.dot li {float: left;list-style: none;width: 12px;height: 12px;display: block;margin-left: 40px;box-sizing: border-box;background-color: white;}
+.dot li {float: left;list-style: none;width: 12px;height: 12px;display: block;margin-left: 40px;box-sizing: border-box;background-color: white;cursor: pointer;}
 .dot li.active {background-color:#DD0330;transition: 0.2s linear;}
 #wrap:hover .cut {opacity: 1;transition: 0.5s linear;}
 /* 轮播以下 */
@@ -20,7 +20,7 @@
 .classify-product{float: left;}
 .row1{float:left;width: 585px;height: 400px;position: relative;margin-top: 30px;}
 .row-bg1{color: white;display: block;width: 585px;height: 100px;line-height:100px;position: absolute;text-align: center;top:160px;z-index: 100;}
-.row-bg1-1{font-size: 30px;}
+.row-bg1-1{font-size: 30px;cursor: pointer;}
 .row2{float: right;width: 585px;height: 400px;position: relative;margin-top: 30px;margin-left: 20px;}
 
 

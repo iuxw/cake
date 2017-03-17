@@ -9,15 +9,16 @@
 .auto-l-empty a{display: block;width: 120px;height: 40px;text-align: center;text-decoration: none;padding: 2px 5px;line-height: 40px;background-color: rgb(143, 193, 89);border-radius: 6px;margin: 0 auto;color: white;font-size: 20px;}
 
 .cartList li{list-style: none;}
-.listTitle{background-color: rgb(236,236,236)}
-.listTitle span{display: inline-block;width: 120px;padding: 20px 0;}
-.listTitle span:first-child{width: 200px;text-align: left}
+.listTitle{background-color: rgb(236,236,236);border-radius: 5px;color: #333;}
+.listTitle span{display: inline-block;width: 120px;padding: 10px 0;}
+/*.listTitle span:first-child{width: 200px;text-align: left}*/
 .listDetail{border-bottom: 1px solid #E3E3E3}
 .listDetail>span{display: inline-block;width: 120px;padding: 10px 0;}
-.listDetail span:first-child{width: 200px;text-align: left}
+/*.listDetail span:first-child{width: 200px;text-align: left}*/
 .listDetail>span.nowShop{color: forestgreen;cursor: pointer}
 .listDetail span.delLi{color: #DD0330;cursor: pointer}
-
+.listDetail span.orderImage{width: 120px;}
+.listDetail span.orderImage img{width: 80px;margin: 0;}
 
 
 

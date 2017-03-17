@@ -63,12 +63,8 @@ $(function () {
         $('.popup1:eq(0)').show();
         $('.popup1:eq(1)').hide();
     });
-    $('.row').click(function () {
-        var index = $(this).index();
-        location.href = 'list.html';
-    });
     $('.ppt-box').click(function () {
-        location.href = 'detail.html'
+        location.href = '/detail'
     });
 //	登陆注册
     $('#login').submit(function (e) {

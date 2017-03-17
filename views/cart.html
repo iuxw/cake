@@ -13,6 +13,7 @@
 			{{else}}
 			<ul class="cartList">
 				<li class="listTitle">
+					<span></span>
 					<span>商品</span>
 					<span>单价</span>
 					<span>数量</span>
@@ -23,6 +24,7 @@
 				</li>
 				{{each indents as indent}}
 				<li class="listDetail" data-id="{{indent.id}}">
+					<span class="orderImage"><img src="images/{{indent.name}}.jpg" alt=""></span>
 					<span id="name">{{indent.name}}</span>
 					<span><span id="price">{{indent.price}}</span>元</span>
 					<span id="number">{{indent.number}}</span>

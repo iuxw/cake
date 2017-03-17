@@ -36,8 +36,8 @@ footer{background-color: #090909;float: left;width: 100%;min-width: 1200px;}
 .ft-01-bg2{font-size: 24px;}
 .foot-line{background-color: rgb(46, 46, 46);float: left;width: 1200px;height: 1px;margin-top: 50px;}
 .foot-logo{width: 1200px;text-align: center;margin-top: 20px;}
-.foot-nav{width:1200px;margin-top:20px;height: 20px;font-size: 14px;}
-.foot-nav ul{width: 460px;list-style: none;height: 20px;margin: 0 auto;}
+.foot-nav{width:1200px;margin-top:20px;height: 20px;font-size: 14px;text-align: center}
+.foot-nav ul{list-style: none;height: 20px;display: inline-block;}
 .liactive{color: rgb(139, 139, 139);cursor: pointer;float: left;height: 20px;line-height: 20px;text-align:center;width: 50px;border-right: 1px solid rgb(139, 139, 139);}
 .foot-nav .li{color: rgb(139, 139, 139);cursor: pointer;float: left;height: 20px;line-height: 20px;text-align:center;width:80px;border-right: 1px solid rgb(139, 139, 139);}
 .foot-login li{color: rgb(139, 139, 139);cursor: pointer;float: left;height: 20px;line-height: 20px;text-align:center;width:80px;border-right: 1px solid black;}

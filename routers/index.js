@@ -1,7 +1,7 @@
 // 导入express模块
 var express = require("express");
 var db = require("../db/db.js");
-const public = require('../public.js');
+const filter = require('../extensions/filter.js');
 
 // 生成路由
 var router = express.Router();
@@ -126,16 +126,16 @@ router.get('/pay', (req, res) => {
     })
 })
 //管理页
-router.get('/admin',public.isAdmin,(req, res) => {
+router.get('/admin',filter.isAdmin,(req, res) => {
     var admin=req.cookies.admin;
     db.Order.find().exec(function (err, data) {
         orders = data.filter(function (ele) {
             return ele.status == '待发货' || ele.status == '待收货' || ele.status == '已完成';
         });
         res.render('admin', {
-            title: '订单管理',
+            title: '生日蛋糕购买网站后台管理',
             alone: 'admin',
-            orders,
+            orders:orders.reverse(),
             admin
         })
     })

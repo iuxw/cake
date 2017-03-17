@@ -25,13 +25,17 @@ header{background-image:url("../images/top_bg.gif");height: 41px;position: relat
 .listDetail span{display: inline-block;width: 100px;text-align: center;padding: 10px 0;}
 .listDetail span.toDo{color: #DD0330;cursor: pointer;}
 .listDetail span.orderNumber{width: 150px;}
-.listDetail span.address{width: 300px;text-decoration: underline;}
+.listDetail span.address{width: 300px;}
+.crimson{color:crimson }
+.green{color:green }
 
 .changePassword{width: 500px;margin: 50px auto;padding-right: 300px;}
 .changePassword div{text-align: right;margin: 20px 0;font-size: 18px;}
 .changePassword div input{width: 200px;height: 30px;padding: 0;font-size: 16px;}
 .changePassword div input[type='submit']{width: 100px;}
 #adminManage{display: none;}
+
+.handle {cursor: pointer;}
 
 
 
