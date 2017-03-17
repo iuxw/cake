@@ -4,6 +4,7 @@
 var db = require("../db/db.js");
 const express = require('express');
 const router = express.Router();
+
 router.post('/api/login', function (req, res) {
     user = req.body;
     db.User.find({phone: user.phone, password: user.password}).exec(function (err, data) {
