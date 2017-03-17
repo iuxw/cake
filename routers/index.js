@@ -1,6 +1,7 @@
 // 导入express模块
 var express = require("express");
 var db = require("../db/db.js");
+const public = require('../public.js');
 
 // 生成路由
 var router = express.Router();
@@ -125,7 +126,7 @@ router.get('/pay', (req, res) => {
     })
 })
 //管理页
-router.get('/admin', (req, res) => {
+router.get('/admin',public.isAdmin,(req, res) => {
     var admin=req.cookies.admin;
     db.Order.find().exec(function (err, data) {
         orders = data.filter(function (ele) {
@@ -139,7 +140,7 @@ router.get('/admin', (req, res) => {
         })
     })
 })
-router.get('/adminLogin', (req, res) => {
+router.get('/adminLogin',(req, res) => {
     res.render('adminLogin', {
         title: '管理员登录',
         alone: 'adminLogin'
