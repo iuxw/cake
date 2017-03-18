@@ -150,7 +150,7 @@ router.post('/api/admin/login',function (req,res) {
             if(data.length>0){
                 res.status(200).json({code:'success',message:'管理员登录成功'})
             }else {
-                res.status(200).json({code:'success',message:'用户名密码错误'})
+                res.status(200).json({code:'error',message:'用户名密码错误'})
             }
         }
     })
