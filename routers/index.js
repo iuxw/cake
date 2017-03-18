@@ -83,11 +83,30 @@ router.get('/order', (req, res) => {
     }
 })
 router.get('/list', (req, res) => {
-    getPage(req, res, '蛋糕列表', 'list');
+    var index=req.query.index;
+    var user = req.cookies.user;
+    var lists = 0;
+    if (user) {
+        db.User.find({phone: user}).exec(function (err, data) {
+            lists = data[0].carts.length;
+            user = '****' + user.substr(4);
+            res.render('list', {
+                title:'蛋糕列表',
+                alone:'list',
+                user,
+                lists,
+                index
+            })
+        })
+    } else {
+        res.render('list', {
+            title:'蛋糕列表',
+            alone:'list',
+            lists,
+            index
+        })
+    }
 })
-router.get('/forget', (req, res) => {
-    getPage(req, res, '忘记密码', 'forget');
-});
 router.get('/detail', (req, res) => {
     getPage(req, res, '蛋糕详情', 'detail');
 });
