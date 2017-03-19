@@ -4,7 +4,8 @@
 $(function () {
     $('body').on('click','.toDo',function () {
         var way = $(this).html();
-        var orderNumber = $(this).siblings('.orderNumber').html();
+        var orderNumber = $(this).parent().siblings('.orderNumber').html();
+        console.log(orderNumber);
         if (way=='立即支付') {
             $.cookie('orderNumber',orderNumber);
             location.replace('/pay')
