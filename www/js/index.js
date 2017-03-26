@@ -74,10 +74,10 @@ $(function () {
         $.post('/api/login',data,function (response,statusText,xhr) {
             if(statusText=='success'){
                 if (response.code=='success'){
-                    console.log(phone);
                     $.cookie("user",phone);
-                    alert(response.message);
-                    location.reload();
+                    $.popup(response.message,function () {
+                        location.reload();
+                    });
                 }else{
                     $('#login .hint').html(response.message);
                     setTimeout(function () {
@@ -98,8 +98,9 @@ $(function () {
             $.post('/api/register',data,function (response,statusText,xhr) {
                 if(statusText=='success'){
                     if (response.code=='success'){
-                        alert(response.message);
-                        location.reload();
+                        $.popup(response.message,function () {
+                            location.reload();
+                        });
                     }else{
                         $('#register .hint').html(response.message);
                         setTimeout(function () {

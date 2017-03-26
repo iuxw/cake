@@ -15,8 +15,9 @@ $(function () {
             data:data,
             success:function (res,status,xhr) {
                 if (res.code=='success'){
-                    alert(res.message);
-                    history.go(-1);
+                    $.popup(res.message,function () {
+                        history.go(-1);
+                    });
                 }
             }
         })

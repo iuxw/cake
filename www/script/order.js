@@ -18,14 +18,16 @@ $(function () {
                 data: {id},
                 success: function (res, status, xhr) {
                     if (res.code == 'success') {
-                        alert(res.message);
-                        location.reload();
+                        $.popup(res.message,function () {
+                            location.reload();
+                        });
                     }
                 }
             })
         }else if(way=='提醒发货'){
-            alert('提醒成功');
-            location.reload();
+            $.popup('提醒成功',function () {
+                location.reload();
+            });
         }
     })
 })

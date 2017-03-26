@@ -54,10 +54,12 @@ $(function () {
             data: {name: name, size: size, number: number, price: price},
             success: function (res, status, xhr) {
                 if(res.code=="success"){
-                    alert(res.message);
-                    location.reload();
+                    $.popup(res.message,function () {
+                        location.reload();
+                    });
                 }else{
-                    alert(res.message)
+                    $.popup(res.message,function () {
+                    });
                 }
             },
             error: function () {
@@ -76,19 +78,24 @@ $(function () {
                 data: {name: name, size: size, number: number, price: price,orderNumber:orderNumber},
                 success: function (res, status, xhr) {
                     if(res.code=="success"){
-                        alert(res.message);
-                        location.href='/pay';
+                        $.popup(res.message,function () {
+                            location.href='/pay';
+                        });
                     }else if(res.code=='base'){
-                        alert(res.message);
-                        location.href='address'
+                        $.popup(res.message,function () {
+                            location.href='/address';
+                        });
                     }else {
-                        alert(res.message);
-                        location.reload()
+                        $.popup(res.message,function () {
+                            location.reload();
+                        });
                     }
                 }
             })
         }else {
-            alert('请先登录')
+            $.popup('请先登录',function () {
+                location.reload();
+            });
         }
     })
 });

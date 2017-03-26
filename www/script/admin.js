@@ -25,10 +25,13 @@ $(function () {
                 data: data,
                 success: function (res, status, xhr) {
                     if (res.code == 'success') {
-                        alert(res.message);
-                        location.reload();
+                        $.popup(res.message,function () {
+                            location.reload();
+                        });
                     }else {
-                        alert(res.message);
+                        $.popup(res.message,function () {
+
+                        });
                     }
                 }
             })
@@ -51,13 +54,15 @@ $(function () {
                 data: {id},
                 success: function (res, status, xhr) {
                     if (res.code == 'success') {
-                        alert(res.message);
-                        location.reload();
+                        $.popup(res.message,function () {
+                            location.reload();
+                        });
                     }
                 }
             })
         }else if (todo=='提醒收货'){
-            alert('提醒成功')
+            $.popup('提醒成功',function () {
+            });
         }
     });
 })

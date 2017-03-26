@@ -1,5 +1,5 @@
 /* 管理 */
-html,body,ul{padding: 0;margin: 0;}
+html,body,ul{padding: 0;margin: 0;font-family: Arial;}
 body{background-color: #337ABB;}
 
 header{background-image:url("../images/top_bg.gif");height: 41px;position: relative;margin-bottom: 55px;}

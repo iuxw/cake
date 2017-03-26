@@ -1,17 +1,10 @@
-// 加载模块
 const mongoose = require("mongoose");
-// 用es6中的Promise来取代 mongoose里集成的已经过时的
-// promise
 mongoose.Promise = Promise;
-// 连接数据库
 mongoose.connect("mongodb://localhost/cake");
 const db = mongoose.connection;
-// 是否打开数据库成功
 db.on("open", () => {
     console.log("打开数据库成功！");
 });
-
-// students集合
 const User = mongoose.model("user", {
     phone: String,
     password: String,

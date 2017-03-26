@@ -11,11 +11,13 @@ $(function () {
             data:$(this).serialize(),
             success:function (res,status,xhr) {
                 if(res.code=='success'){
-                    alert(res.message);
-                    $.cookie("admin",adminName);
-                    location.replace('/admin');
+                    $.popup(res.message,function () {
+                        $.cookie("admin",adminName);
+                        location.replace('/admin');
+                    });
                 }else {
-                    alert(res.message);
+                    $.popup(res.message,function () {
+                    });
                 }
             }
         })

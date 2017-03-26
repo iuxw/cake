@@ -10,7 +10,6 @@ $(function () {
             data: {id},
             success: function (res, status, xhr) {
                 if (res.code == 'success') {
-                    console.log(res.message);
                     location.reload();
                 }
             }
@@ -34,16 +33,19 @@ $(function () {
                         type: 'POST',
                         data: {id},
                         success: function () {
-                            alert(res.message);
-                            location.replace('/pay')
+                            $.popup(res.message,function () {
+                                location.replace('/pay')
+                            });
                         }
                     })
                 } else if(res.code=='base'){
-                    alert(res.message);
-                    location.href='address'
+                    $.popup(res.message,function () {
+                        location.href='address'
+                    });
                 }else {
-                    alert(res.message);
-                    location.reload();
+                    $.popup(res.message,function () {
+                        location.reload();
+                    });
                 }
             }
 
