@@ -88,13 +88,22 @@ $(function () {
         })
     })
     $('#register').submit(function (e) {
+        function checkPhone(){
+            var phone = document.getElementById('phone').value;
+            if(!(/^1[34578]\d{9}$/.test(phone))){
+                alert("手机号码有误，请重填");
+                return false;
+            }
+        }
         e.preventDefault();
         var data = $(this).serialize();
         var password = $('#register input[name = password]').val();
         var password1 = $('#register input[name = password1]').val();
-        console.log(password);
-        console.log(password1);
-        if (password==password1){
+        var phone = $('#register input[name = phone]').val();
+        if(!(/^1[34578]\d{9}$/.test(phone))){
+            $.popup('请输入正确手机号',function () {
+            });
+        }else if (password==password1){
             $.post('/api/register',data,function (response,statusText,xhr) {
                 if(statusText=='success'){
                     if (response.code=='success'){
